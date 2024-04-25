@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button';
+import Logo from '@/components/logo';
 
 function App() {
   return (
-    <main className='text-center'>
-      <div className='inline-flex flex-col justify-content align-items'>
-        <h1>We Mate</h1>
-        <Button>Meet a mate</Button>
+    <main className='text-center h-dvh'>
+      <div className='inline-flex flex-col justify-center align-items gap-8 h-full'>
+        <Logo />
+        <Button className='capitalize bg-mate-pink-dark'>meet a mate</Button>
       </div>
     </main>
   );
