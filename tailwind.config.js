@@ -17,6 +17,16 @@ module.exports = {
       },
     },
     extend: {
+      colors: {
+        mate: {
+          'pink': '#ff8264',
+          "pink-light": '#ffab97',
+          "pink-dark": '#ff5931',
+          'white': '#ffffff',
+          "orange": '#ffaa64',
+          "orange-light": '#ffc697',
+        },
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -34,4 +44,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
