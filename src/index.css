@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --header-height: 56px;
+}
+
+@layer utilities {
+  .header-height {
+    height: var(--header-height);
+  }
+
+  .bg-glass-morphism {
+    background-clip: padding-box;
+    backdrop-filter: blur(4px);
+  }
+}

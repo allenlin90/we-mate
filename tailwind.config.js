@@ -27,6 +27,10 @@ module.exports = {
           "orange-light": '#ffc697',
         },
       },
+      height: {
+        header: 'var(--header-height)',
+        main: 'calc(100vh - var(--header-height))'
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
