@@ -1,15 +1,13 @@
+import { cn } from '@/lib/utils';
+
 interface LogoProps {
   className?: string;
   height?: number;
   width?: number;
 }
 
-const SVGComponent = ({
-  className,
-  width = 350,
-  height = 105.22565825592221,
-}: LogoProps) => (
-  <svg height={height} width={width} className={className}>
+const SVGComponent = ({ className }: LogoProps) => (
+  <svg viewBox='0 0 350 105.22565825592221' className={cn('w-full', className)}>
     <defs id='SvgjsDefs1001' />
     <g
       id='SvgjsG1007'
