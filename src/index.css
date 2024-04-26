@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --header-height: 56px;
+  --header-height: 3.5rem;
+  --footer-height: 3.5rem;
 }
 
 @layer utilities {
+  .footer-height {
+    height: var(--footer-height);
+  }
+
   .header-height {
     height: var(--header-height);
   }

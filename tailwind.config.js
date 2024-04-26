@@ -28,8 +28,9 @@ module.exports = {
         },
       },
       height: {
+        footer: 'var(--footer-height)',
         header: 'var(--header-height)',
-        main: 'calc(100vh - var(--header-height))'
+        main: 'calc(100vh - var(--header-height) - var(--footer-height))'
       },
       keyframes: {
         "accordion-down": {
