@@ -7,6 +7,12 @@
     },
     "meet": {
       "title": "Meet"
+    },
+    "errors": {
+      "general": "Something went wrong",
+      "actions": {
+        "go_back": "Go Back"
+      }
     }
   }
 }
