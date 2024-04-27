@@ -50,6 +50,7 @@
 
 #### Maintenance
 - [ ] User activities logging
+- [ ] `huksy` for git commit pattern
 
 --- 
 
