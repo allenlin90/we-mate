@@ -83,6 +83,7 @@
 #### 1.3.1.6. Maintenance
 - [ ] User activities logging
 - [ ] `huksy` for git commit pattern
+- [ ] Unit test
 
 --- 
 
