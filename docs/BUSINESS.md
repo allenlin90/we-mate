@@ -27,10 +27,13 @@
 
 # Case studies
 ## Solutions with similar feature
-- WeChat
+- [WeChat](https://www.wechat.com/)
   - Discover
-- Tinder
-- Meetup
+- [Tinder](https://tinder.com/)
+- [Meetup](https://www.meetup.com/)
+- [Kahoot!](https://kahoot.com/)
+- Facebook
+  - Nearby friend (deprecated)
 
 ## Service as plugin
 - QueQ
@@ -40,6 +43,7 @@
   - TripAdvisor
   - DianPing
 - Language exchange
+- Party/event organizer
 
 ## Questions
 ### Short term and cost on acquisition
