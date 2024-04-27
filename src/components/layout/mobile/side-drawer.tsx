@@ -10,12 +10,16 @@ import {
 } from '@/components/ui/sheet';
 
 interface SideDrawerProps {
+  size?: number;
   side?: SheetVariants['side'];
+  showCloseButton?: boolean;
 }
 
 const SideDrawer = ({
   children,
   side = 'left',
+  size = 24,
+  showCloseButton = false,
 }: React.PropsWithChildren<SideDrawerProps>) => {
   const { pathname } = useLocation();
   const pathnameRef = useRef('');
@@ -33,9 +37,9 @@ const SideDrawer = ({
     <div className='md:hidden'>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
-          <Hamburger size={24} toggled={false} />
+          <Hamburger size={size} toggled={open} onToggle={setOpen} />
         </SheetTrigger>
-        <SheetContent side={side} showCloseButton={false}>
+        <SheetContent side={side} showCloseButton={showCloseButton}>
           {children}
         </SheetContent>
       </Sheet>
