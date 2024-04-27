@@ -3,8 +3,9 @@ import { ErrorBoundary } from 'react-error-boundary';
 
 import Home from '@/pages/home';
 import Meet from '@/pages/meet';
+import Settings from '@/pages/settings';
 import Error from '@/components/error';
-import MobileLayout from '@/components/mobile-layout';
+import MobileLayout from '@/components/layout/mobile';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/' element={<Home />} />;
         <Route element={<MobileLayout />}>
           <Route path='/meet' element={<Meet />} />
+          <Route path='/settings' element={<Settings />} />
         </Route>
         <Route path='*' element={<Navigate to='/' />} />
       </Route>
