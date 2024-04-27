@@ -33,6 +33,7 @@
 - [ ] Modal
 - [ ] Toast
 - [ ] Header/Footer navigation
+- [ ] Skeleton loader
 
 #### App dressing
 - [x] Error boundary
