@@ -6,16 +6,19 @@ import { VitePWA } from 'vite-plugin-pwa';
 // https://vitejs.dev/config/
 export default () => {
   const PORT = +(process.env.PORT || 3000);
+  const DISABLE_PWA = process.env.DISABLE_PWA === 'true';
 
   return defineConfig({
     plugins: [
       react(),
       VitePWA({
+        devOptions: { enabled: process.env.NODE_ENV === 'development' },
+        includeAssets: ['favicon.ico', 'icons/apple-touch-icon.png'],
         registerType: 'autoUpdate',
+        selfDestroying: DISABLE_PWA,
         workbox: {
           globPatterns: ['**/*.{js,css,html,ico,png,svg}'], // cache assets by file types
         },
-        includeAssets: ['favicon.ico', 'icons/apple-touch-icon.png'],
         manifest: {
           name: 'We Mate',
           short_name: 'WeMate',
