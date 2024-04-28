@@ -8,6 +8,19 @@
     "meet": {
       "title": "Meet"
     },
+    "headers": {
+      "new_update": "New Update"
+    },
+    "messages": {
+      "offline_ready": "App ready to work offline",
+      "need_update": "New content available, click on reload button to update"
+    },
+    "actions": {
+      "reload": "Reload",
+      "update": "Update",
+      "cancel": "Cancel",
+      "close": "Close"
+    },
     "errors": {
       "general": "Something went wrong",
       "actions": {

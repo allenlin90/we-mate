@@ -18,6 +18,7 @@ export default () => {
         selfDestroying: DISABLE_PWA,
         workbox: {
           globPatterns: ['**/*.{js,css,html,ico,png,svg}'], // cache assets by file types
+          sourcemap: true,
         },
         manifest: {
           name: 'We Mate',

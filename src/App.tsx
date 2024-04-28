@@ -6,6 +6,7 @@ import Meet from '@/pages/meet';
 import Settings from '@/pages/settings';
 import Error from '@/components/error';
 import MobileLayout from '@/components/layout/mobile';
+import SWHandler from '@/components/sw-handler';
 
 function App() {
   return (
@@ -17,12 +18,21 @@ function App() {
           </ErrorBoundary>
         }
       >
-        <Route path='/' element={<Home />} />;
-        <Route element={<MobileLayout />}>
-          <Route path='/meet' element={<Meet />} />
-          <Route path='/settings' element={<Settings />} />
+        <Route
+          element={(() => (
+            <>
+              <SWHandler />
+              <Outlet />
+            </>
+          ))()}
+        >
+          <Route path='/' element={<Home />} />
+          <Route element={<MobileLayout />}>
+            <Route path='/meet' element={<Meet />} />
+            <Route path='/settings' element={<Settings />} />
+          </Route>
+          <Route path='*' element={<Navigate to='/' />} />
         </Route>
-        <Route path='*' element={<Navigate to='/' />} />
       </Route>
     </Routes>
   );
