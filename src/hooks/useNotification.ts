@@ -20,7 +20,11 @@ export default function useNotification() {
         return;
       }
 
-      new Notification(title, options);
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.ready
+          .then((registration) => registration.showNotification(title, options))
+          .catch(console.error);
+      }
     },
     [t]
   );
