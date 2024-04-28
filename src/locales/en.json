@@ -10,9 +10,6 @@
     },
     "errors": {
       "general": "Something went wrong",
-      "notification": {
-        "not_granted": "Notifications is not granted"
-      },
       "actions": {
         "go_back": "Go Back"
       }
