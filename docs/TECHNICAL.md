@@ -61,7 +61,7 @@
 - [ ] Feature flags
 
 #### 1.3.1.2. Components
-- [ ] Modal
+- [x] Modal
 - [ ] Toast
 - [ ] Header/Footer navigation
 - [ ] Skeleton loader
