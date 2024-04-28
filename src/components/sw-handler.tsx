@@ -2,6 +2,7 @@ import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { useRegisterSW } from '@/lib/registerSW';
+import pubSubNotification from '@/lib/push-notification';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -20,7 +21,16 @@ const SWHandler = ({ children }: React.PropsWithChildren) => {
     needRefresh: [needRefresh, setNeedRefresh],
     updateServiceWorker,
   } = useRegisterSW({
-    // onRegistered(r) {},
+    async onRegistered(r) {
+      if (r) {
+        // TODO: request vapid_public_key based on user and device
+        const error = await pubSubNotification(r, 'vapid_public_key');
+
+        if (error) {
+          // TODO: handle error
+        }
+      }
+    },
     onRegisterError(error) {
       console.error('SW registration error: ', error);
     },

@@ -75,7 +75,11 @@
 #### 1.3.1.4. PWA features
 - [x] Download and install
 - [x] Offline access
-- [ ] Push notification
+- Push notification
+  - [x] Creating new subscription by SW on PWA
+  - [ ] Server endpoint 
+  - [ ] Subscription management
+  - [ ] SW callback for `push` event handler
 
 #### 1.3.1.5. Optimization
 - [ ] Dynamic loading
