@@ -14,7 +14,7 @@ export default () => {
       VitePWA({
         devOptions: { enabled: process.env.NODE_ENV === 'development' },
         includeAssets: ['favicon.ico', 'icons/apple-touch-icon.png'],
-        registerType: 'autoUpdate',
+        registerType: 'prompt',
         selfDestroying: DISABLE_PWA,
         workbox: {
           globPatterns: ['**/*.{js,css,html,ico,png,svg}'], // cache assets by file types
