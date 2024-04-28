@@ -21,6 +21,7 @@ const SWHandler = ({ children }: React.PropsWithChildren) => {
     needRefresh: [needRefresh, setNeedRefresh],
     updateServiceWorker,
   } = useRegisterSW({
+    immediate: true,
     async onRegistered(r) {
       if (r) {
         // TODO: request vapid_public_key based on user and device

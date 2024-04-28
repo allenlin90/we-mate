@@ -4401,7 +4401,7 @@ workbox-navigation-preload@7.1.0:
   dependencies:
     workbox-core "7.1.0"
 
-workbox-precaching@7.1.0:
+workbox-precaching@7.1.0, workbox-precaching@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/workbox-precaching/-/workbox-precaching-7.1.0.tgz#71e27ec2e85661a41b48dec0c92dae707c429eaa"
   integrity sha512-LyxzQts+UEpgtmfnolo0hHdNjoB7EoRWcF7EDslt+lQGd0lW4iTvvSe3v5JiIckQSB5KTW5xiCqjFviRKPj1zA==

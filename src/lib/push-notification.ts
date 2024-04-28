@@ -17,9 +17,10 @@ export default async function pubSubNotification(
 
     if (sub === null) {
       // create new subscription
+      const applicationServerKey = urlBase64ToUint8Array(appServerKey);
       const newSub = await r.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(appServerKey),
+        applicationServerKey,
       });
 
       // TODO: store subscription to allow server using paired secret vapid key to call push server

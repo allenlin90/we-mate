@@ -7,15 +7,23 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default () => {
   const PORT = +(process.env.PORT || 3000);
   const DISABLE_PWA = process.env.DISABLE_PWA === 'true';
+  const devMode = process.env.NODE_ENV === 'development';
 
   return defineConfig({
     plugins: [
       react(),
       VitePWA({
-        devOptions: { enabled: process.env.NODE_ENV === 'development' },
-        includeAssets: ['favicon.ico', 'icons/apple-touch-icon.png'],
-        registerType: 'prompt',
+        disable: DISABLE_PWA,
         selfDestroying: DISABLE_PWA,
+        devOptions: {
+          enabled: devMode,
+          type: 'module',
+        },
+        srcDir: 'src', // put file in src directory
+        filename: 'sw.ts',
+        registerType: 'prompt',
+        strategies: 'injectManifest', // custom service worker
+        includeAssets: ['favicon.ico', 'icons/apple-touch-icon.png'],
         workbox: {
           globPatterns: ['**/*.{js,css,html,ico,png,svg}'], // cache assets by file types
           sourcemap: true,
