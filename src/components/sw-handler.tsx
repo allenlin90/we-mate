@@ -13,6 +13,8 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 
+const VAPID_PUBLIC = String(import.meta.env.VITE_VAPID_PUBLIC || '');
+
 const SWHandler = ({ children }: React.PropsWithChildren) => {
   const { t } = useTranslation();
 
@@ -24,8 +26,7 @@ const SWHandler = ({ children }: React.PropsWithChildren) => {
     immediate: true,
     async onRegistered(r) {
       if (r) {
-        // TODO: request vapid_public_key based on user and device
-        const error = await pubSubNotification(r, 'vapid_public_key');
+        const error = await pubSubNotification(r, VAPID_PUBLIC);
 
         if (error) {
           // TODO: handle error
