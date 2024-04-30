@@ -13,6 +13,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 
+// TODO: keep in config with zod typed
 const VAPID_PUBLIC = String(import.meta.env.VITE_VAPID_PUBLIC || '');
 
 const SWHandler = ({ children }: React.PropsWithChildren) => {
